@@ -1,0 +1,35 @@
+# Multilingual AI Safety Dataset
+
+## Overview
+This dataset contains 150 multilingual prompts designed to evaluate AI safety responses across five language slices.
+
+## Dataset Structure
+- `seeds.csv` – Original dataset in CSV format.
+- `seeds.jsonl` – Original dataset in JSONL format, including all metadata.
+- `ppo.jsonl` – CuratorKIT processed prompt-only export.
+
+## Languages
+- English (`en`)
+- Tamil (`ta`)
+- Romanised Tamil (`ta_rom`)
+- Malay (`ms`)
+- Manglish (`manglish`)
+
+## Categories
+- Harmful prompts – Expected response: `refuse`
+- Benign prompts – Expected response: `answer`
+- Sounds-harmful prompts – Expected response: `answer`
+
+## Processing
+The dataset was processed using CuratorKIT 0.1.23 with deduplication and text cleaning enabled.
+
+- Total rows processed: 150
+- Passed: 150
+- Rejected: 0
+- Duplicates removed: 0
+
+## Important Note
+The original `seeds.jsonl` file is the master dataset and should be preserved. The `ppo.jsonl` file contains only the prompt field and does not replace the original dataset.
+
+## Verification
+Tamil and Malay translations require native-speaker review. Only mark rows as verified after the relevant language reviewer has checked them.
